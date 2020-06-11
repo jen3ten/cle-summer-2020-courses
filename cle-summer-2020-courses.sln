@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cle-summer-2020-courses", "cle-summer-2020-courses\cle-summer-2020-courses.csproj", "{957A2CF2-9056-493E-BBEE-06701A8E1304}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cle-summer-2020-courses", "cle-summer-2020-courses\cle-summer-2020-courses.csproj", "{957A2CF2-9056-493E-BBEE-06701A8E1304}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cle-summer-2020-courses.Tests", "cle-summer-2020-courses.Tests\cle-summer-2020-courses.Tests.csproj", "{949B882F-5E9D-4C3F-ABD1-2C9EE45BD7EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{957A2CF2-9056-493E-BBEE-06701A8E1304}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{957A2CF2-9056-493E-BBEE-06701A8E1304}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{957A2CF2-9056-493E-BBEE-06701A8E1304}.Release|Any CPU.Build.0 = Release|Any CPU
+		{949B882F-5E9D-4C3F-ABD1-2C9EE45BD7EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{949B882F-5E9D-4C3F-ABD1-2C9EE45BD7EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{949B882F-5E9D-4C3F-ABD1-2C9EE45BD7EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{949B882F-5E9D-4C3F-ABD1-2C9EE45BD7EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
