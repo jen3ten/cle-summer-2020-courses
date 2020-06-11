@@ -11,7 +11,7 @@ namespace cle_summer_2020_courses.Controllers
     {
         public ViewResult Index()
         {
-            Course model = new Course("Intro to MVC");
+            Course model = new Course("Intro to MVC", 42, "All you need to know about MVC");
             return View(model);
         }
 

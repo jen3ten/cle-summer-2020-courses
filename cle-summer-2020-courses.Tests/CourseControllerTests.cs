@@ -27,7 +27,6 @@ namespace cle_summer_2020_courses.Tests
         [Fact]
         public void Index_Passes_CourseModel_To_View()
         {
-            //var underTest = new Course();
 
             var result = underTest.Index();
 

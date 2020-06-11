@@ -12,7 +12,7 @@ namespace cle_summer_2020_courses.Tests
 
         public CourseTests()
         {
-            underTest = new Course("Course Name");
+            underTest = new Course("Course Name", 42, "All you need to know about MVC");
         }
 
         [Fact]
@@ -22,5 +22,22 @@ namespace cle_summer_2020_courses.Tests
 
             Assert.Equal("Course Name", result);
         }
+
+        [Fact]
+        public void CourseConstructor_Sets_Id_On_CourseModel()
+        {
+            var result = underTest.Id;
+
+            Assert.Equal(42, result);
+        }
+
+        [Fact]
+        public void CourseConstructor_Sets_Description_On_CourseModel()
+        {
+            var result = underTest.Description;
+
+            Assert.Equal("All you need to know about MVC", result);
+        }
+
     }
 }
