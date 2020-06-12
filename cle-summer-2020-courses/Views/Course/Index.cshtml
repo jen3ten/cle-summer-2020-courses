@@ -1,4 +1,5 @@
-﻿
+﻿@model IEnumerable<cle_summer_2020_courses.Models.Course>
+
 @{
     Layout = null;
 }
@@ -9,14 +10,14 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Course</title>
-    <link href="~/style.StyleSheet.css" rel="stylesheet"/>
+    <link href="~/style.StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
     <h1>Courses List</h1>
     @foreach (var course in Model)
     {
-        <p>Title: <span>@Model.Name</span></p>
-        <p>Description: <span>@Model.Description</span></p>
+        <p>Title: <span>@course.Name</span></p>
+        <p>Description: <span>@course.Description</span></p>
         <hr />
     }
 </body>
