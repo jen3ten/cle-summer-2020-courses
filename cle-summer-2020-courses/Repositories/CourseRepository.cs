@@ -9,7 +9,7 @@ namespace cle_summer_2020_courses.Repositories
 {
     public class CourseRepository : IRepository<Course>
     {
-        public UniversityContext db;
+        private UniversityContext db;
 
         public CourseRepository(UniversityContext db)
         {
