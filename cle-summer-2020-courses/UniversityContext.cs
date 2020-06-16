@@ -10,6 +10,7 @@ namespace cle_summer_2020_courses
     public class UniversityContext : DbContext
     {
         public DbSet<Course> Courses { get; set; }
+        public DbSet<Instructor> Instructors { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -28,7 +29,8 @@ namespace cle_summer_2020_courses
                 {
                     Id = 1,
                     Name = "Machine Learing",
-                    Description = "Machine learning for humans"
+                    Description = "Machine learning for humans",
+                    InstructorId = 1
                 },
 
                 new Course()
@@ -36,6 +38,7 @@ namespace cle_summer_2020_courses
                     Id = 2,
                     Name = "C# for Smarties",
                     Description = "It's all you need to learn it all",
+                    InstructorId = 2
                 },
 
                 new Course()
@@ -43,7 +46,23 @@ namespace cle_summer_2020_courses
                     Id = 3,
                     Name = "HTML, CSS, JS, oh my!",
                     Description = "OMG, the front end will become your BFF",
+                    InstructorId = 2
                 });
+
+            modelBuilder.Entity<Instructor>().HasData(
+                new Instructor()
+                {
+                    Id = 1,
+                    Name = "Jen"
+                },
+
+                new Instructor()
+                {
+                    Id = 2,
+                    Name = "Andy"
+                });
+
+            base.OnModelCreating(modelBuilder);
 
         }
     }
