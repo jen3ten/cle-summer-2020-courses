@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cle_summer_2020_courses.Repositories
 {
-    public class CourseRepository
+    public class CourseRepository : IRepository<Course>
     {
         public List<Course> coursesList;
 
