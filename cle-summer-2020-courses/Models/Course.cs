@@ -16,6 +16,8 @@ namespace cle_summer_2020_courses.Models
 
         public virtual CourseLocation Location { get; set; }
 
+        public virtual List<StudentCourse> StudentCourses { get; set; }
+
 
         public Course()
         {

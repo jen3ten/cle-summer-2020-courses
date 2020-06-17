@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using cle_summer_2020_courses;
 
 namespace cle_summer_2020_courses.Migrations
 {
     [DbContext(typeof(UniversityContext))]
-    partial class UniversityContextModelSnapshot : ModelSnapshot
+    [Migration("20200617005207_AddedStudentCourseModel")]
+    partial class AddedStudentCourseModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
