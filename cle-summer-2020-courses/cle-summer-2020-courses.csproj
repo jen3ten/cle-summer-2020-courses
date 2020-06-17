@@ -10,6 +10,8 @@
     <Compile Remove="Migrations\20200616234759_AddedInstructorModel.Designer.cs" />
     <Compile Remove="Migrations\20200616235044_AddedInstructorModel.cs" />
     <Compile Remove="Migrations\20200616235044_AddedInstructorModel.Designer.cs" />
+    <Compile Remove="Migrations\20200617001505_RemovedVirtualFromInstructorId.cs" />
+    <Compile Remove="Migrations\20200617001505_RemovedVirtualFromInstructorId.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
