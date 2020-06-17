@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using cle_summer_2020_courses;
 
 namespace cle_summer_2020_courses.Migrations
 {
     [DbContext(typeof(UniversityContext))]
-    partial class UniversityContextModelSnapshot : ModelSnapshot
+    [Migration("20200617000845_AddedCourseLocationModel")]
+    partial class AddedCourseLocationModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,7 +48,7 @@ namespace cle_summer_2020_courses.Migrations
                             Id = 1,
                             Description = "Machine learning for humans",
                             InstructorId = 1,
-                            Name = "Machine Learning"
+                            Name = "Machine Learing"
                         },
                         new
                         {
@@ -101,13 +103,6 @@ namespace cle_summer_2020_courses.Migrations
                             Building = "Harrison",
                             CourseId = 2,
                             RoomNumber = "335"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Building = "Baker Hall",
-                            CourseId = 3,
-                            RoomNumber = "2"
                         });
                 });
 

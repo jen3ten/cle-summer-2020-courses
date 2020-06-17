@@ -14,6 +14,7 @@ namespace cle_summer_2020_courses.Models
         public virtual int InstructorId { get; set; }
         public virtual Instructor Instructor { get; set; }
 
+        public virtual CourseLocation Location { get; set; }
 
 
         public Course()

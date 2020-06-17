@@ -11,6 +11,7 @@ namespace cle_summer_2020_courses
     {
         public DbSet<Course> Courses { get; set; }
         public DbSet<Instructor> Instructors { get; set; }
+        public DbSet<CourseLocation> CourseLocations { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -28,7 +29,7 @@ namespace cle_summer_2020_courses
                 new Course()
                 {
                     Id = 1,
-                    Name = "Machine Learing",
+                    Name = "Machine Learning",
                     Description = "Machine learning for humans",
                     InstructorId = 1
                 },
@@ -61,6 +62,32 @@ namespace cle_summer_2020_courses
                     Id = 2,
                     Name = "Andy"
                 });
+
+            modelBuilder.Entity<CourseLocation>().HasData(
+                new CourseLocation()
+                {
+                    Id = 1,
+                    Building = "Schmidt Hall",
+                    RoomNumber = "102B",
+                    CourseId = 1
+                },
+
+                new CourseLocation()
+                {
+                    Id = 2,
+                    Building = "Harrison",
+                    RoomNumber = "335",
+                    CourseId = 2
+                },
+
+                new CourseLocation()
+                {
+                    Id = 3,
+                    Building = "Baker Hall",
+                    RoomNumber = "2",
+                    CourseId = 3
+                });
+
 
             base.OnModelCreating(modelBuilder);
 
