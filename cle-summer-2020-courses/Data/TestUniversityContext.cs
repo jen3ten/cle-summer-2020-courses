@@ -37,16 +37,16 @@ namespace cle_summer_2020_courses
                 new Course()
                 {
                     Id = 2,
-                    Name = "Test Course 1",
-                    Description = "Test Course Description 1",
+                    Name = "Test Course 2",
+                    Description = "Test Course Description 2",
                     InstructorId = 2
                 },
 
                 new Course()
                 {
                     Id = 3,
-                    Name = "Test Course 1",
-                    Description = "Test Course Description 1",
+                    Name = "Test Course 3",
+                    Description = "Test Course Description 3",
                     InstructorId = 2
                 });
 

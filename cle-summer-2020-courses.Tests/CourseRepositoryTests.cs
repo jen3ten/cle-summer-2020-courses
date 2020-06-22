@@ -30,11 +30,27 @@ namespace cle_summer_2020_courses.Tests
         }
 
         [Fact]
+        public void GetAll_Returns_3_Courses()
+        {
+            var result = underTest.GetAll();
+
+            Assert.Equal(3, result.Count());
+        }
+
+        [Fact]
         public void GetById_Returns_One_Course()
         {
             var result = underTest.GetById(1);
 
             Assert.IsType<Course>(result);
+        }
+
+        [Fact]
+        public void GetById_Returns_First_Course()
+        {
+            var result = underTest.GetById(1);
+
+            Assert.Equal("Test Course 1", result.Name);
         }
 
     }
