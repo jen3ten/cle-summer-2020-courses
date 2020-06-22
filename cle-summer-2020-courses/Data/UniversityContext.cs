@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace cle_summer_2020_courses
 {
-    public class UniversityContext : DbContext
+    public class UniversityContext : DbContext, IUniversityContext
     {
         public DbSet<Course> Courses { get; set; }
         public DbSet<Instructor> Instructors { get; set; }
