@@ -12,12 +12,12 @@ namespace cle_summer_2020_courses.Tests
 {
     public class CourseRepositoryTests
     {
-        private UniversityContext db;
+        private IUniversityContext db;
         private CourseRepository underTest;
 
         public CourseRepositoryTests()
         {
-            db = new UniversityContext();
+            db = new TestUniversityContext();
             underTest = new CourseRepository(db);
         }
 
