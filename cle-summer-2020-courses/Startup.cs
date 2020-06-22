@@ -30,6 +30,7 @@ namespace cle_summer_2020_courses
             services.AddDbContext<UniversityContext>();
             services.AddScoped<IRepository<Course>, CourseRepository>();
             services.AddScoped<IRepository<Instructor>, InstructorRepository>();
+            services.AddScoped<IUniversityContext, UniversityContext>();
 
         }
 
