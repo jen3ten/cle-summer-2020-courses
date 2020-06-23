@@ -66,5 +66,34 @@ namespace cle_summer_2020_courses.Tests
             Assert.IsType<ViewResult>(result);
         }
 
+        [Fact]
+        public void Create_Post_Action_Returns_an_ActionResult()
+        {
+            var result = underTest.Create(new Course());
+
+            Assert.IsAssignableFrom<ActionResult>(result);
+        }
+
+        [Fact]
+        public void Create_Will_Not_Execute_If_Invalid_Model_State()
+        {
+            underTest.ModelState.AddModelError("Name", "Name is required");
+            var newCourse = new Course();
+
+            underTest.Create(newCourse);
+
+            courseRepo.DidNotReceive().Create(newCourse);
+        }
+
+        [Fact]
+        public void Create_Will_Execute_if_Valid_Model_State()
+        {
+            var newCourse = new Course();
+
+            underTest.Create(newCourse);
+
+            courseRepo.Received().Create(newCourse);
+        }
+
     }
 }
