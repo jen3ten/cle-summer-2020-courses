@@ -6,28 +6,28 @@ using System.Threading.Tasks;
 
 namespace cle_summer_2020_courses.Repositories
 {
-    public class InstructorRepository : IRepository<Instructor>
+    public class InstructorRepository : Repository<Instructor>, IRepository<Instructor>
     {
-        private UniversityContext db;
+        //private UniversityContext db;
 
-        public InstructorRepository(UniversityContext db)
+        public InstructorRepository(UniversityContext db) : base(db)
         {
-            this.db = db;
+            //this.db = db;
         }
 
-        public void Create(Instructor obj)
-        {
-            throw new NotImplementedException();
-        }
+        //public void Create(Instructor obj)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public IEnumerable<Instructor> GetAll()
-        {
-            return db.Instructors;
-        }
+        //public IEnumerable<Instructor> GetAll()
+        //{
+        //    return db.Instructors;
+        //}
 
-        public Instructor GetById(int id)
-        {
-            return db.Instructors.Single(i => i.Id == id);
-        }
+        //public Instructor GetById(int id)
+        //{
+        //    return db.Instructors.Single(i => i.Id == id);
+        //}
     }
 }
