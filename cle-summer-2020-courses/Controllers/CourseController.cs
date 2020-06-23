@@ -33,5 +33,12 @@ namespace cle_summer_2020_courses.Controllers
 
             return View(model);
         }
+
+        public ViewResult Create()
+        {
+            return View();
+        }
+
+       
     }
 }

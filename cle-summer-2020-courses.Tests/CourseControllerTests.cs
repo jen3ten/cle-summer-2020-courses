@@ -56,6 +56,15 @@ namespace cle_summer_2020_courses.Tests
             var result = underTest.Details(1);
             
             Assert.Equal(expectedCourse, result.Model);
+        } 
+
+        [Fact]
+        public void Create_Returns_a_ViewResult()
+        {
+            var result = underTest.Create();
+
+            Assert.IsType<ViewResult>(result);
         }
+
     }
 }
