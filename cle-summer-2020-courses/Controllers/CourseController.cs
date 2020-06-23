@@ -34,11 +34,17 @@ namespace cle_summer_2020_courses.Controllers
             return View(model);
         }
 
+        [HttpGet]
         public ViewResult Create()
         {
             return View();
         }
 
-       
+        [HttpPost]
+        public ActionResult Create(Course course)
+        {
+            courseRepo.Create(course);
+            return RedirectToAction("Index");
+        }
     }
 }
