@@ -43,8 +43,12 @@ namespace cle_summer_2020_courses.Controllers
         [HttpPost]
         public ActionResult Create(Course course)
         {
-            courseRepo.Create(course);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                courseRepo.Create(course);
+                return RedirectToAction("Index");
+            }
+            return View(course);
         }
     }
 }
