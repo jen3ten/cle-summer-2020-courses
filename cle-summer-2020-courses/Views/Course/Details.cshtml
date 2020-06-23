@@ -14,7 +14,14 @@
     <h1>Course Details</h1>
     <p>Title: <span>@Model.Name</span></p>
     <p>Instructor: <span>@Model.Instructor.Name</span></p>
-    <p>Location: <span>@Model.Location.Building, Room @Model.Location.RoomNumber</span></p>
+    @if (Model.Location == null)
+    {
+        <p>Location: Unknown</p>
+    }
+    else
+    {
+        <p>Location: <span>@Model.Location.Building, Room @Model.Location.RoomNumber</span></p>
+    }
     <p>Description: <span>@Model.Description</span></p>
     <p>Students: </p>
     <ol>
