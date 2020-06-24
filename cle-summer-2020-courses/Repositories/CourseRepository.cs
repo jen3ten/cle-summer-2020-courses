@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace cle_summer_2020_courses.Repositories
 {
-    public class CourseRepository : UniversityRepository<Course>, IRepository<Course>
+    public class CourseRepository : Repository<Course>, IRepository<Course>
     {
         UniversityContext db;
         public CourseRepository(UniversityContext db) : base(db)
@@ -16,5 +16,9 @@ namespace cle_summer_2020_courses.Repositories
             this.db = db;
         }
 
+        public override List<Instructor> PopulateInstructorList()
+        {
+            return db.Instructors.ToList();
+        }
     }
 }
