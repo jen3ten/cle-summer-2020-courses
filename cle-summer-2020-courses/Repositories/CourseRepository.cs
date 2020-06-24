@@ -8,21 +8,12 @@ using System.Threading.Tasks;
 
 namespace cle_summer_2020_courses.Repositories
 {
-    public class CourseRepository : Repository<Course>, IRepository<Course>, ISelectList
+    public class CourseRepository : UniversityRepository<Course>, IRepository<Course>
     {
         UniversityContext db;
         public CourseRepository(UniversityContext db) : base(db)
         {
             this.db = db;
-        }
-
-        public List<SelectListItem> PopulateInstructorList()
-        {
-            var instructorQuery = from i in db.Instructors
-                                  orderby i.Name
-                                  select i;
-
-            return instructorQuery.ToList();
         }
 
     }

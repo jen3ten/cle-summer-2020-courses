@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using cle_summer_2020_courses.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,6 @@ namespace cle_summer_2020_courses.Repositories
 {
     public interface ISelectList
     {
-        List<SelectListItem> PopulateInstructorList();
+        List<Instructor> PopulateInstructorList();
     }
 }

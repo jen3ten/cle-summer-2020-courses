@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace cle_summer_2020_courses.Repositories
 {
-    public class Repository<T> where T : class
+    public class UniversityRepository<T> where T : class
     {
-        private DbContext db;
+        private UniversityContext db;
 
-        public Repository(DbContext db)
+        public UniversityRepository(UniversityContext db)
         {
             this.db = db;
         }
@@ -41,6 +41,11 @@ namespace cle_summer_2020_courses.Repositories
         public IEnumerable<T> GetAll()
         {
             return db.Set<T>().ToList();
+        }
+
+        public List<Instructor> PopulateInstructorList()
+        {
+            return db.Instructors.ToList();
         }
     }
 }
