@@ -14,6 +14,8 @@
     <Compile Remove="Migrations\20200617001505_RemovedVirtualFromInstructorId.Designer.cs" />
     <Compile Remove="Migrations\20200617013049_InstructorController.cs" />
     <Compile Remove="Migrations\20200617013049_InstructorController.Designer.cs" />
+    <Compile Remove="Migrations\20200623225845_AddedInstructorListProperty.cs" />
+    <Compile Remove="Migrations\20200623225845_AddedInstructorListProperty.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

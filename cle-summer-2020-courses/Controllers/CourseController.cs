@@ -33,6 +33,7 @@ namespace cle_summer_2020_courses.Controllers
         [HttpGet]
         public ViewResult Create()
         {
+            courseRepo.PopulateInstructorList();
             return View();
         }
 
